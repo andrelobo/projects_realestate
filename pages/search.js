@@ -27,12 +27,12 @@ const Search = ({ properties }) => {
         justifyContent='center'
         alignItems='center'
       >
-        <Text>Search Property By Filters</Text>
+        <Text>Procure Imóveis pelo filtro</Text>
         <Icon paddingLeft='2' w='7' as={BsFilter} />
       </Flex>
       {searchFilters && <SearchFilters />}
       <Text fontSize='2xl' p='4' fontWeight='bold'>
-        Properties {router.query.purpose}
+        Imóveis {router.query.purpose}
       </Text>
       <Flex flexWrap='wrap'>
         {properties.map((property) => <Property property={property} key={property.id} />)}
@@ -40,7 +40,7 @@ const Search = ({ properties }) => {
       {properties.length === 0 && (
         <Flex justifyContent='center' alignItems='center' flexDir='column' marginTop='5' marginBottom='5'>
           <Image src={noresult} />
-          <Text fontSize='xl' marginTop='3'>No Result Found.</Text>
+          <Text fontSize='xl' marginTop='3'>Nenhum resultado encontrado</Text>
         </Flex>
       )}
     </Box>
